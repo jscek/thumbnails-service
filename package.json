@@ -1,0 +1,28 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "Template for NodeJS + Typescript projects",
+  "main": "index.ts",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "lint": "eslint . --ext .ts",
+    "start": "npm run build && node build/index.js",
+    "start:dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "Jacek Starz",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^16.4.12",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
