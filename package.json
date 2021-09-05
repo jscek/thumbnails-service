@@ -7,12 +7,14 @@
     "build": "rimraf ./build && tsc",
     "lint": "eslint . --ext .ts",
     "start": "npm run build && node build/index.js",
-    "start:dev": "nodemon"
+    "start:dev": "env-cmd nodemon"
   },
   "keywords": [],
   "author": "Jacek Starz",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/fluent-ffmpeg": "^2.1.18",
+    "@types/minio": "^7.0.10",
     "@types/node": "^16.4.12",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
@@ -24,5 +26,14 @@
     "rimraf": "^3.0.2",
     "ts-node": "^10.1.0",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.3.7",
+    "@stvsh/commons": "^1.0.15",
+    "@stvsh/media_pb": "^1.1.3",
+    "env-cmd": "^10.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "minio": "^7.0.19",
+    "nanoid": "^3.1.25"
   }
 }
