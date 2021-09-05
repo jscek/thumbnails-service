@@ -97,7 +97,9 @@ const handler = (): grpc.UntypedServiceImplementation => {
 
         callback(null, response);
       } catch (error) {
-        callback(error);
+        if (error instanceof Error) {
+          callback(error);
+        }
       }
     }
   };
